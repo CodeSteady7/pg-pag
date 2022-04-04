@@ -1,0 +1,62 @@
+.App{
+    max-width: 1250px;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 0 15px;
+    box-shadow: 0 0 15px #eee;
+  }
+
+.Apps{
+    max-width: 1250px;
+    min-height: 80vh;
+    margin: 0 auto;
+    padding: 0 15px;
+    border: none;
+    box-shadow: 0 0 15px #eee;
+  }
+
+
+
+.tengah {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.input-center-row {
+    display: flex;
+}
+
+.input-center-span {
+    flex: 1;
+}
+
+.input-center-input{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.input-center-input span{
+}
+
+.header-center {
+    justify-content: center;
+    flex: 1;
+    display: flex;
+}
+
+.input-col {
+
+}
+
+.background {
+    /* background-color: #f4f3ef; */
+    background-color: #ffffff;
+}
+
+.background-user {
+    /* background-color: #f4f3ef; */
+    background-color:  #ffffff;
+}
