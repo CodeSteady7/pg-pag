@@ -47,3 +47,11 @@ app.use(function (err, req, res, next) {
 });
 
 module.exports = app;
+
+// # APP_NAME=pgpag_db
+
+// # DB_USERNAME=aqilatec_root
+// # DB_PASSWORD='Wisuda_2022%t'
+// # DB_HOSTNAME='localhost'
+// # DB_NAME=pgpag_db
+// # DB_DIALECT=mysql

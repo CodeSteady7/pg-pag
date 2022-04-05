@@ -14,39 +14,40 @@ function FormApi() {
 
 	useEffect(() => {
 		const FieldTbl = async () => {
-			const field = await axios.get('http://localhost:4000/users/getfield');
+			// const field = await axios.get('http://localhost:4000/users/getfield');
+			const field = await axios.get('http://pgpag.aqilatech.com/users/getfield');
 			setTblField(field.data);
 			// setAktif(field.data[0].nilai_jam);
 		};
 		const view_volfBF = async () => {
-			const volfBF = await axios.get('http://localhost:4000/users/volfBF');
+			const volfBF = await axios.get('http://pgpag.aqilatech.com/users/volfBF');
 			setview_volfBF(volfBF.data);
 			// setAktif(field.data[0].nilai_jam);
 		};
 		const Table_jam = async () => {
-			const tbl_jam = await axios.get('http://localhost:4000/users/view_jam');
+			const tbl_jam = await axios.get('http://pgpag.aqilatech.com/users/view_jam');
 			setTblJam(tbl_jam.data);
 		};
 		const view_voltaf = async () => {
-			const voltAF = await axios.get('http://localhost:4000/users/volfAF');
+			const voltAF = await axios.get('http://pgpag.aqilatech.com/users/volfAF');
 			setview_voltAF(voltAF.data);
 		};
 		const view_loadamp = async () => {
-			const loadAmp = await axios.get('http://localhost:4000/users/loadamp');
+			const loadAmp = await axios.get('http://pgpag.aqilatech.com/users/loadamp');
 			setView_loadamp(loadAmp.data);
 		};
 		const view_powerFactor = async () => {
 			const powerfactor = await axios.get(
-				'http://localhost:4000/users/powerfactor'
+				'http://pgpag.aqilatech.com/users/powerfactor'
 			);
 			setView_powerfactor(powerfactor.data);
 		};
 		const view_load_mw = async () => {
-			const load_mw = await axios.get('http://localhost:4000/users/load_mw');
+			const load_mw = await axios.get('http://pgpag.aqilatech.com/users/load_mw');
 			setView_load_mw(load_mw.data);
 		};
 		const view_mvar = async () => {
-			const mvar = await axios.get('http://localhost:4000/users/mvar');
+			const mvar = await axios.get('http://pgpag.aqilatech.com/users/mvar');
 			setView_mvar(mvar.data);
 		};
 
@@ -62,7 +63,7 @@ function FormApi() {
 
 	// map.tblField()
 	return (
-		console.log('view_load_mw => ', view_load_mw),
+		console.log('tblJam => ', tblJam),
 		{
 			powerfactor: [view_powerfactor, setView_powerfactor],
 			voltAF: [view_voltaf, setview_voltAF],

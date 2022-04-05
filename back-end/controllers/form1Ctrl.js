@@ -10,7 +10,6 @@ const {
 	powerFactor,
 	voltAfterTrafo,
 	voltBeforeTrafo,
-	Form1,
 	view_field,
 	tbl_jam,
 	view_volfBF,
