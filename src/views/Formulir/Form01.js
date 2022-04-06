@@ -73,7 +73,8 @@ function Form01() {
 	const tryPost = async e => {
 		e.preventDefault();
 		try {
-			const input = await axios.post('http://pgpag.aqilatech.com/users/form1', {
+			// 'http://localhost:4000/users/form1'
+			const input = await axios.post('http://192.168.85.9:4000/users/form1', {
 				...user,
 				kode_jam: clock,
 			});

@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import QRCode from 'qrcode';
 import { useNavigate } from 'react-router-dom';
-import { QrReader } from 'react-qr-reader';
+// import { QrReader } from 'react-qr-reader';
+import QrReader from 'react-camera-qr';
 import {
 	Card,
 	CardHeader,
@@ -72,6 +73,18 @@ function ScanPage(props) {
 	console.log(clock);
 	// console.log('tes', sParameterName);
 
+	let handleScan = datas => {
+		if (datas) {
+			// this.setState({
+			// 	result: data,
+			// });
+			setData(datas);
+		}
+	};
+	let handleError = err => {
+		console.error(err);
+	};
+
 	return (
 		<>
 			<div className='wrapper'>
@@ -87,7 +100,7 @@ function ScanPage(props) {
 								</div> */}
 							</CardHeader>
 							<CardBody>
-								{/* <Button onClick={() => generateQrCode()}>Generate</Button> */}
+								<Button onClick={() => generateQrCode()}>Generate</Button>
 								<h3 className='text-center text-uppercase'>Qr Code Scan By Camera</h3>
 								{/* <QrReader
 									delay={300}
@@ -96,31 +109,35 @@ function ScanPage(props) {
 									onScan={handleScanWebCam}
 								/> */}
 								{scanShow ? (
+									// <QrReader
+									// 	onResult={(result, error) => {
+									// 		if (result) {
+									// 			setData(result?.text);
+
+									// 			// setTimeout(() => {
+									// 			setScanShow(false);
+									// 			// }, 500);
+									// 		}
+
+									// 		if (error) {
+									// 			console.info(error);
+									// 		}
+									// 	}}
+									// 	style={{ width: '100px' }}
+									// 	delay={1000}
+									// />
 									<QrReader
-										onResult={(result, error) => {
-											if (result) {
-												setData(result?.text);
-
-												// setTimeout(() => {
-												setScanShow(false);
-												// }, 500);
-											}
-
-											if (error) {
-												console.info(error);
-											}
-										}}
-										style={{ width: '100px' }}
-										delay={1000}
+										delay={300}
+										onError={handleError}
+										onScan={handleScan}
+										style={{ width: '100%' }}
 									/>
 								) : (
 									''
 								)}
-								{data === 'next' ? (
-									navigate(`/formulir/from01?jam=${clock}&tgl=${date}`)
-								) : (
-									<QrReader />
-								)}
+								{data === 'next'
+									? navigate(`/formulir/from01?jam=${clock}&tgl=${date}`)
+									: ''}
 								<div className='text-center'>
 									<h3>Result : {data}</h3>
 								</div>

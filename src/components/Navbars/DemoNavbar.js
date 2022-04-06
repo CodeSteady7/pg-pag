@@ -26,11 +26,11 @@ function Header(props) {
 							FORM
 						</NavLink>
 					</NavItem>
-					<NavItem>
+					{/* <NavItem>
 						<NavLink href='/formulir' className='text-dark'>
 							FORMULIR
 						</NavLink>
-					</NavItem>
+					</NavItem> */}
 				</Nav>
 				{props.logic ? (
 					<form className='res-input'>

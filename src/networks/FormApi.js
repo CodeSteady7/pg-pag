@@ -14,40 +14,40 @@ function FormApi() {
 
 	useEffect(() => {
 		const FieldTbl = async () => {
-			// const field = await axios.get('http://localhost:4000/users/getfield');
-			const field = await axios.get('http://pgpag.aqilatech.com/users/getfield');
+			const field = await axios.get('http://192.168.85.9:4000/users/getfield');
 			setTblField(field.data);
 			// setAktif(field.data[0].nilai_jam);
 		};
 		const view_volfBF = async () => {
-			const volfBF = await axios.get('http://pgpag.aqilatech.com/users/volfBF');
+			const volfBF = await axios.get('http://192.168.85.9:4000/users/volfBF');
 			setview_volfBF(volfBF.data);
 			// setAktif(field.data[0].nilai_jam);
 		};
 		const Table_jam = async () => {
-			const tbl_jam = await axios.get('http://pgpag.aqilatech.com/users/view_jam');
+			const tbl_jam = await axios.get('http://192.168.85.9:4000/users/view_jam');
 			setTblJam(tbl_jam.data);
 		};
 		const view_voltaf = async () => {
-			const voltAF = await axios.get('http://pgpag.aqilatech.com/users/volfAF');
+			const voltAF = await axios.get('http://192.168.85.9:4000/users/volfAF');
 			setview_voltAF(voltAF.data);
 		};
 		const view_loadamp = async () => {
-			const loadAmp = await axios.get('http://pgpag.aqilatech.com/users/loadamp');
+			const loadAmp = await axios.get('http://192.168.85.9:4000/users/loadamp');
 			setView_loadamp(loadAmp.data);
 		};
 		const view_powerFactor = async () => {
 			const powerfactor = await axios.get(
-				'http://pgpag.aqilatech.com/users/powerfactor'
+				'http://192.168.85.9:4000/users/powerfactor'
 			);
 			setView_powerfactor(powerfactor.data);
 		};
 		const view_load_mw = async () => {
-			const load_mw = await axios.get('http://pgpag.aqilatech.com/users/load_mw');
+			const load_mw = await axios.get('http://192.168.85.9:4000/users/load_mw');
 			setView_load_mw(load_mw.data);
 		};
 		const view_mvar = async () => {
-			const mvar = await axios.get('http://pgpag.aqilatech.com/users/mvar');
+			const mvar = await axios.get('http://192.168.85.9:4000/users/mvar');
+			// const mvar = await axios.get('http://localhost:4000/users/mvar');
 			setView_mvar(mvar.data);
 		};
 
@@ -63,7 +63,7 @@ function FormApi() {
 
 	// map.tblField()
 	return (
-		console.log('tblJam => ', tblJam),
+		console.log('view_load_mw => ', view_load_mw),
 		{
 			powerfactor: [view_powerfactor, setView_powerfactor],
 			voltAF: [view_voltaf, setview_voltAF],
